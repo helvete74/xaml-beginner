@@ -10,39 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace RestaurantManager.WPF
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour ExpediteWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ExpediteWindow : Window
     {
-        public MainWindow()
+        public ExpediteWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //GoToOrder
-            
-            ExpediteWindow w = new ExpediteWindow();
+            //todo : go home page
+            //todo : go to homepage
+            MainWindow w = new MainWindow();
             w.Show();
             this.Close();
 
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //GotoSubmitOrders
-            
-            OrderWindow w = new OrderWindow();
-            w.Show();
-            this.Close();
+            //todo nothing
         }
     }
 }

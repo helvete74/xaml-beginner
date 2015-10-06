@@ -1,0 +1,48 @@
+﻿<Window x:Class="RestaurantManager.WPF.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantManager.WPF"
+        mc:Ignorable="d"
+        Title="OrderWindow" Height="300" Width="300">
+   <Grid Background="Black">
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="0.5*"/>
+         <ColumnDefinition Width="0.25*"/>
+         <ColumnDefinition Width="0.25*"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+         <RowDefinition Height="0.2*"/>
+         <RowDefinition Height="0.1*"/>
+         <RowDefinition Height="0.5*"/>
+         <RowDefinition Height="0.2*"/>
+      </Grid.RowDefinitions>
+      <Button Margin="0,0,113,10" Foreground="White" Content="H" ToolTip="Home" FontSize="10.667" Background="Black" Click="Button_Click_2"/>
+      <Button Grid.Row="3" Height="25" Margin="15,21,0,0"  Width="118" Background="Black" Foreground="White" Content="Add to Order" FontSize="13.333" Click="Button_Click" />
+
+      <Button Grid.ColumnSpan="2" Grid.Column="1" Margin="15,21,0,0" Grid.Row="3" Height="25" Width="118" Background="Black" Foreground="White" Content="Submit Order" FontSize="13.333" Click="Button_Click_1"  />
+
+      <TextBox x:Name="txtSpecial" HorizontalAlignment="Left" Height="22" Margin="146,3,0,0" Grid.Row="1" 
+                 TextWrapping="Wrap" Text="Special Request:" VerticalAlignment="Top" Width="78" BorderThickness="0,0,0,0" FontSize="9.333" Grid.ColumnSpan="2" Background="Black" Foreground="White"/>
+      <TextBox x:Name="txtSpecial_Copy" HorizontalAlignment="Left" Height="22" Margin="0,3,0,0" Grid.Row="1" 
+        	TextWrapping="Wrap" Text="Order Items:" VerticalAlignment="Top" Width="72" BorderThickness="0,0,0,0" FontSize="9.333" Grid.Column="2" Foreground="White" Background="Black"/>
+
+
+      <ListView x:Name="listView" HorizontalAlignment="Left" Height="148" Margin="-1,2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="151" Background="Black" Foreground="White" Visibility="Hidden">
+         <ListView.View>
+            <GridView>
+               <GridViewColumn/>
+            </GridView>
+         </ListView.View>
+      </ListView>
+      <ListView x:Name="listView1" Grid.Column="2" HorizontalAlignment="Left" Height="148" Margin="1,1,0,0" Grid.Row="2" VerticalAlignment="Top" Width="72" Background="Black" Visibility="Hidden">
+         <ListView.View>
+            <GridView>
+               <GridViewColumn/>
+            </GridView>
+         </ListView.View>
+      </ListView>
+
+   </Grid>
+</Window>

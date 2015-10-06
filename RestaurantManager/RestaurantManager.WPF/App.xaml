@@ -4,12 +4,7 @@
              xmlns:local="clr-namespace:RestaurantManager.WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="Button">
-            <Setter Property="FontSize" Value="32" />
-        </Style>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="32" />
-        </Style>
+
 
     </Application.Resources>
 </Application>

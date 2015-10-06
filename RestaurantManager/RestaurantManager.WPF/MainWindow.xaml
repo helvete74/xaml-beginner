@@ -1,33 +1,34 @@
-﻿<Window x:Class="RestaurantManager.WPF.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RestaurantManager.WPF"
+        x:Class="RestaurantManager.WPF.MainWindow"
         mc:Ignorable="d"
         Title="Restaurant manager" Height="350" Width="525">
-    <Grid Background="Black" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.4*"/>
-            <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.5*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.5*"/>
-        </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtGoToOrder" HorizontalAlignment="Left" Height="31" 
-                 Margin="36,52,0,0" Grid.Row="2" TextWrapping="Wrap" Text="** Go to Orders View **" VerticalAlignment="Top" Width="136" BorderThickness="0" Background="Black" Foreground="White"/>
+   <Grid Background="Black" >
+      <Grid.RowDefinitions>
+         <RowDefinition Height="0.4*"/>
+         <RowDefinition Height="0.1*"/>
+         <RowDefinition Height="0.5*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="0.5*"/>
+         <ColumnDefinition Width="0.5*"/>
+      </Grid.ColumnDefinitions>
+      <Button  Grid.Row="2" Background="Black" Foreground="White" 
+			Content="Go to Orders View" FontSize="12" Click="Button_Click" Margin="58,88,78,36" RenderTransformOrigin="0.5,0.319"   />
 
-        <TextBox x:Name="txtSubmitOrder" Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Left" Height="31" Margin="36,52,0,0" 
-                 TextWrapping="Wrap" Text="** Submit Orders **" VerticalAlignment="Top" Width="136" BorderThickness="0" Background="Black">
-            <TextBox.Foreground>
-                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
-            </TextBox.Foreground>
-        </TextBox>
-        <TextBox x:Name="txtTitle" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="187,99,0,0" 
-                 TextWrapping="Wrap" Text="Restaurant Manager" VerticalAlignment="Top" Width="150" TextAlignment="Center" BorderThickness="0" Background="Black" Foreground="White" FontSize="16"/>
-        <TextBox x:Name="txtVersion" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="20" Margin="187,11,0,0" 
-                 Grid.Row="1" TextWrapping="Wrap" Text="Internal Test Version" VerticalAlignment="Top" Width="150" TextAlignment="Center" BorderThickness="0" Foreground="White" Background="Black"/>
-    </Grid>
+
+      <Button Grid.Column="1" Grid.Row="2"  Height="35" Margin="36,52,0,0" Width="136" 
+			Content="Submit Order"  FontSize="12" Foreground="White" Background="Black" Click="Button_Click_1" />
+
+      <TextBox x:Name="txtTitle" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="187,99,0,0" 
+			TextWrapping="Wrap" Text="Restaurant Manager" VerticalAlignment="Top" Width="150" TextAlignment="Center" 
+                 BorderThickness="0" Background="Black" Foreground="White" FontSize="16"/>
+      <TextBox x:Name="txtVersion" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="20" Margin="187,11,0,0" 
+			Grid.Row="1" TextWrapping="Wrap" Text="Internal Test Version" VerticalAlignment="Top" Width="150" TextAlignment="Center" 
+                 BorderThickness="0" Foreground="White" Background="Black"/>
+   </Grid>
 </Window>
